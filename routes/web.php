@@ -21,19 +21,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 
     Route::resource('users', 'UsersController');
 
-    Route::delete('product-categories/destroy', 'ProductCategoryController@massDestroy')->name('product-categories.massDestroy');
+    Route::delete('contents/destroy', 'ContentController@massDestroy')->name('contents.massDestroy');
 
-    Route::resource('product-categories', 'ProductCategoryController');
+    Route::resource('contents', 'ContentController');
 
-    Route::post('product-categories/media', 'ProductCategoryController@storeMedia')->name('product-categories.storeMedia');
-
-    Route::delete('product-tags/destroy', 'ProductTagController@massDestroy')->name('product-tags.massDestroy');
-
-    Route::resource('product-tags', 'ProductTagController');
-
-    Route::delete('products/destroy', 'ProductController@massDestroy')->name('products.massDestroy');
-
-    Route::resource('products', 'ProductController');
-
-    Route::post('products/media', 'ProductController@storeMedia')->name('products.storeMedia');
+    Route::post('contents/media', 'ContentController@storeMedia')->name('contents.storeMedia');
 });

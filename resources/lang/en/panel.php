@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'sadegh',
+    'site_title' => 'asset',
 ];
