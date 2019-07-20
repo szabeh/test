@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'userManagement'    => [
+    'userManagement' => [
         'title'          => 'User management',
         'title_singular' => 'User management',
     ],
-    'permission'        => [
+    'permission'     => [
         'title'          => 'Permissions',
         'title_singular' => 'Permission',
         'fields'         => [
@@ -21,7 +21,7 @@ return [
             'deleted_at_helper' => '',
         ],
     ],
-    'role'              => [
+    'role'           => [
         'title'          => 'Roles',
         'title_singular' => 'Role',
         'fields'         => [
@@ -39,7 +39,7 @@ return [
             'deleted_at_helper'  => '',
         ],
     ],
-    'user'              => [
+    'user'           => [
         'title'          => 'Users',
         'title_singular' => 'User',
         'fields'         => [
@@ -65,70 +65,28 @@ return [
             'deleted_at_helper'        => '',
         ],
     ],
-    'productManagement' => [
-        'title'          => 'Product Management',
-        'title_singular' => 'Product Management',
-    ],
-    'productCategory'   => [
-        'title'          => 'Categories',
-        'title_singular' => 'Category',
-        'fields'         => [
-            'id'                 => 'ID',
-            'id_helper'          => '',
-            'name'               => 'Name',
-            'name_helper'        => '',
-            'description'        => 'Description',
-            'description_helper' => '',
-            'photo'              => 'Photo',
-            'photo_helper'       => '',
-            'created_at'         => 'Created at',
-            'created_at_helper'  => '',
-            'updated_at'         => 'Updated At',
-            'updated_at_helper'  => '',
-            'deleted_at'         => 'Deleted At',
-            'deleted_at_helper'  => '',
-        ],
-    ],
-    'productTag'        => [
-        'title'          => 'Tags',
-        'title_singular' => 'Tag',
+    'content'        => [
+        'title'          => 'Content',
+        'title_singular' => 'Content',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
-            'name'              => 'Name',
-            'name_helper'       => '',
+            'image'             => 'عکس',
+            'image_helper'      => '',
             'created_at'        => 'Created at',
             'created_at_helper' => '',
-            'updated_at'        => 'Updated At',
+            'updated_at'        => 'Updated at',
             'updated_at_helper' => '',
-            'deleted_at'        => 'Deleted At',
+            'deleted_at'        => 'Deleted at',
             'deleted_at_helper' => '',
-        ],
-    ],
-    'product'           => [
-        'title'          => 'Products',
-        'title_singular' => 'Product',
-        'fields'         => [
-            'id'                 => 'ID',
-            'id_helper'          => '',
-            'name'               => 'Name',
-            'name_helper'        => '',
-            'description'        => 'Description',
-            'description_helper' => '',
-            'price'              => 'Price',
-            'price_helper'       => '',
-            'category'           => 'Categories',
-            'category_helper'    => '',
-            'tag'                => 'Tags',
-            'tag_helper'         => '',
-            'photo'              => 'Photo',
-            'photo_helper'       => '',
-            'created_at'         => 'Created at',
-            'created_at_helper'  => '',
-            'updated_at'         => 'Updated At',
-            'updated_at_helper'  => '',
-            'deleted_at'         => 'Deleted At',
-            'deleted_at_helper'  => '',
+            'body'              => 'Body',
+            'body_helper'       => '',
+            'lid'               => 'Lid',
+            'lid_helper'        => '',
+            'rutitr'            => 'Rutitr',
+            'rutitr_helper'     => '',
+            'status'            => 'Status',
+            'status_helper'     => '',
         ],
     ],
 ];

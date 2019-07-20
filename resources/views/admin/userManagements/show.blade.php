@@ -3,21 +3,14 @@
 
 <div class="card">
     <div class="card-header">
-        {{ trans('global.show') }} {{ trans('cruds.permission.title') }}
+        {{ trans('global.show') }} {{ trans('cruds.userManagement.title') }}
     </div>
 
     <div class="card-body">
         <div>
             <table class="table table-bordered table-striped">
                 <tbody>
-                    <tr>
-                        <th>
-                            {{ trans('cruds.permission.fields.title') }}
-                        </th>
-                        <td>
-                            {{ $permission->title }}
-                        </td>
-                    </tr>
+
                 </tbody>
             </table>
             <a style="margin-top:20px;" class="btn btn-default" href="{{ url()->previous() }}">

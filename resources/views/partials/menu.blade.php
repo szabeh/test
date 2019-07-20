@@ -1,108 +1,77 @@
-<aside class="main-sidebar">
-    <section class="sidebar" style="height: auto;">
-        <ul class="sidebar-menu tree" data-widget="tree">
-            <li>
-                <a href="{{ route("admin.home") }}">
-                    <i class="fas fa-fw fa-tachometer-alt">
+<div class="sidebar">
+    <nav class="sidebar-nav">
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="{{ route("admin.home") }}" class="nav-link">
+                    <i class="nav-icon fas fa-fw fa-tachometer-alt">
 
                     </i>
                     {{ trans('global.dashboard') }}
                 </a>
             </li>
             @can('user_management_access')
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa-fw fas fa-users">
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link  nav-dropdown-toggle" href="#">
+                        <i class="fa-fw fas fa-users nav-icon">
 
                         </i>
-                        <span>{{ trans('cruds.userManagement.title') }}</span>
-                        <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
+                        {{ trans('cruds.userManagement.title') }}
                     </a>
-                    <ul class="treeview-menu">
+                    <ul class="nav-dropdown-items">
                         @can('permission_access')
-                            <li class="{{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
-                                <a href="{{ route("admin.permissions.index") }}">
-                                    <i class="fa-fw fas fa-unlock-alt">
+                            <li class="nav-item">
+                                <a href="{{ route("admin.permissions.index") }}" class="nav-link {{ request()->is('admin/permissions') || request()->is('admin/permissions/*') ? 'active' : '' }}">
+                                    <i class="fa-fw fas fa-unlock-alt nav-icon">
 
                                     </i>
-                                    <span>{{ trans('cruds.permission.title') }}</span>
+                                    {{ trans('cruds.permission.title') }}
                                 </a>
                             </li>
                         @endcan
                         @can('role_access')
-                            <li class="{{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
-                                <a href="{{ route("admin.roles.index") }}">
-                                    <i class="fa-fw fas fa-briefcase">
+                            <li class="nav-item">
+                                <a href="{{ route("admin.roles.index") }}" class="nav-link {{ request()->is('admin/roles') || request()->is('admin/roles/*') ? 'active' : '' }}">
+                                    <i class="fa-fw fas fa-briefcase nav-icon">
 
                                     </i>
-                                    <span>{{ trans('cruds.role.title') }}</span>
+                                    {{ trans('cruds.role.title') }}
                                 </a>
                             </li>
                         @endcan
                         @can('user_access')
-                            <li class="{{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
-                                <a href="{{ route("admin.users.index") }}">
-                                    <i class="fa-fw fas fa-user">
+                            <li class="nav-item">
+                                <a href="{{ route("admin.users.index") }}" class="nav-link {{ request()->is('admin/users') || request()->is('admin/users/*') ? 'active' : '' }}">
+                                    <i class="fa-fw fas fa-user nav-icon">
 
                                     </i>
-                                    <span>{{ trans('cruds.user.title') }}</span>
+                                    {{ trans('cruds.user.title') }}
                                 </a>
                             </li>
                         @endcan
                     </ul>
                 </li>
             @endcan
-            @can('product_management_access')
-                <li class="treeview">
-                    <a href="#">
-                        <i class="fa-fw fas fa-shopping-cart">
+            @can('content_access')
+                <li class="nav-item">
+                    <a href="{{ route("admin.contents.index") }}" class="nav-link {{ request()->is('admin/contents') || request()->is('admin/contents/*') ? 'active' : '' }}">
+                        <i class="fa-fw fas fa-cogs nav-icon">
 
                         </i>
-                        <span>{{ trans('cruds.productManagement.title') }}</span>
-                        <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
+                        {{ trans('cruds.content.title') }}
                     </a>
-                    <ul class="treeview-menu">
-                        @can('product_category_access')
-                            <li class="{{ request()->is('admin/product-categories') || request()->is('admin/product-categories/*') ? 'active' : '' }}">
-                                <a href="{{ route("admin.product-categories.index") }}">
-                                    <i class="fa-fw fas fa-folder">
-
-                                    </i>
-                                    <span>{{ trans('cruds.productCategory.title') }}</span>
-                                </a>
-                            </li>
-                        @endcan
-                        @can('product_tag_access')
-                            <li class="{{ request()->is('admin/product-tags') || request()->is('admin/product-tags/*') ? 'active' : '' }}">
-                                <a href="{{ route("admin.product-tags.index") }}">
-                                    <i class="fa-fw fas fa-folder">
-
-                                    </i>
-                                    <span>{{ trans('cruds.productTag.title') }}</span>
-                                </a>
-                            </li>
-                        @endcan
-                        @can('product_access')
-                            <li class="{{ request()->is('admin/products') || request()->is('admin/products/*') ? 'active' : '' }}">
-                                <a href="{{ route("admin.products.index") }}">
-                                    <i class="fa-fw fas fa-shopping-cart">
-
-                                    </i>
-                                    <span>{{ trans('cruds.product.title') }}</span>
-                                </a>
-                            </li>
-                        @endcan
-                    </ul>
                 </li>
             @endcan
-            <li>
-                <a href="#" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
-                    <i class="fas fa-fw fa-sign-out-alt">
+            <li class="nav-item">
+                <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+                    <i class="nav-icon fas fa-fw fa-sign-out-alt">
 
                     </i>
                     {{ trans('global.logout') }}
                 </a>
             </li>
         </ul>
-    </section>
-</aside>
+
+    </nav>
+    <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+</div>
